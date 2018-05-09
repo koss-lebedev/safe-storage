@@ -1,19 +1,19 @@
-import inMemoryStorage from './inMemoryStorage'
-import isStorageAvailable from './isStorageAvailable'
+import inMemoryStorage from "./inMemoryStorage";
+import isStorageAvailable from "./isStorageAvailable";
 
-import { IStorage } from './types'
+import { IStorage } from "./types";
 
-const safeLocalStorage = 
-  isStorageAvailable('localStorage') ? 
+const safeLocalStorage =
+  isStorageAvailable("localStorage") ?
     window.localStorage :
-    inMemoryStorage
+    inMemoryStorage;
 
-const safeSessionStorage = 
-  isStorageAvailable('sessionStorage') ? 
-    window.sessionStorage : 
-    inMemoryStorage
+const safeSessionStorage =
+  isStorageAvailable("sessionStorage") ?
+    window.sessionStorage :
+    inMemoryStorage;
 
 export {
   safeLocalStorage,
   safeSessionStorage,
-}
+};

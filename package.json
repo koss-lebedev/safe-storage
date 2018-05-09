@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "tslint --fix --project . 'src/**/*.ts'",
-    "build": "rm -rf ./lib && mkdir -p lib && tsc"
+    "build": "rm -rf ./lib && mkdir -p lib && tsc",
+    "precommit": "lint-staged"
   },
   "keywords": [
     "localStorage",
@@ -16,6 +17,15 @@
   "author": "Constantine Lebedev <koss.lebedev@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "husky": "^0.14.3",
+    "lint-staged": "^7.1.0",
+    "tslint": "^5.10.0",
     "typescript": "^2.8.3"
+  },
+  "lint-staged": {
+    "*.js": [
+      "tslint --fix --project . 'src/**/*.ts'",
+      "git add"
+    ]
   }
 }
