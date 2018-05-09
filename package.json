@@ -1,0 +1,21 @@
+{
+  "name": "safe-storage",
+  "version": "1.0.0",
+  "description": "Provides in-memory storage implementation when localStorage or sessionStorage aren't available",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "tslint --fix --project . 'src/**/*.ts'",
+    "build": "rm -rf ./lib && mkdir -p lib && tsc"
+  },
+  "keywords": [
+    "localStorage",
+    "sessionStorage",
+    "in-memory"
+  ],
+  "author": "Constantine Lebedev <koss.lebedev@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^2.8.3"
+  }
+}
