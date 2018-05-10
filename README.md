@@ -26,7 +26,7 @@ console.log(safeLocalStorage.length);
 safeLocalStorage.removeItem('token');
 
 console.log(safeLocalStorage.getItem('token'));
-// output: undefined
+// output: null
 
 ```
 
