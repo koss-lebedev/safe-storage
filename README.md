@@ -10,4 +10,28 @@ Safe implementations for localStorage and sessionStorage, which fallbacks to in-
 
 ## Usage
 
-TODO
+`safe-storage` has the same signature as localStorage and sessionStorage, so you can use it as you would use normal localStorage or sessionStorage. Example:
+
+```js
+import { safeLocalStorage } from 'safe-storage';
+
+safeLocalStorage.setItem('token', '<123456789>');
+
+console.log(safeLocalStorage.getItem('token'));
+// output: <123456789>
+
+console.log(safeLocalStorage.length);
+// output: 1 
+
+safeLocalStorage.removeItem('token');
+
+console.log(safeLocalStorage.getItem('token'));
+// output: undefined
+
+```
+
+For sessionStorage:
+
+```js
+import { safeSessionStorage } from 'safe-storage';
+```

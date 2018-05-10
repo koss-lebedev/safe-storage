@@ -1,6 +1,6 @@
 {
   "name": "safe-storage",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Provides in-memory storage implementation when localStorage or sessionStorage aren't available",
   "main": "./lib/index.js",
   "typings": "./lib/index.d.ts",
