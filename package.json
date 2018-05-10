@@ -2,9 +2,10 @@
   "name": "safe-storage",
   "version": "1.0.0",
   "description": "Provides in-memory storage implementation when localStorage or sessionStorage aren't available",
-  "main": "./src/index.js",
+  "main": "./lib/index.js",
+  "typings": "./lib/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "npm run build",
     "lint": "tslint --fix --project .",
     "build": "rm -rf ./dist && mkdir -p dist && tsc",
     "precommit": "lint-staged",
