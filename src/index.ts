@@ -3,12 +3,12 @@ import isStorageAvailable from "./isStorageAvailable";
 
 import { IStorage } from "./types";
 
-const safeLocalStorage =
+const safeLocalStorage: IStorage =
   isStorageAvailable("localStorage") ?
     window.localStorage :
     inMemoryStorage;
 
-const safeSessionStorage =
+const safeSessionStorage: IStorage =
   isStorageAvailable("sessionStorage") ?
     window.sessionStorage :
     inMemoryStorage;

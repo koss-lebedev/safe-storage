@@ -1,15 +1,15 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
-import { safeLocalStorage } from '../../lib/index'
+import { safeLocalStorage } from "../../lib/index";
 
-const TOKEN_KEY = '@safe-storage/token'
+const TOKEN_KEY = "@safe-storage/token";
 
 class Index extends Component {
 
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
-      value: ''
+      value: ""
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -19,7 +19,7 @@ class Index extends Component {
   handleChange(event) {
     this.setState({
       value: event.target.value,
-    })
+    });
   }
 
   handleAdd() {

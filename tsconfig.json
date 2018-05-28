@@ -6,7 +6,7 @@
     "outDir": "lib",
     "strict": true,
     "forceConsistentCasingInFileNames": true,
-    "pretty": true,
+    "pretty": true
   },
   "include": [
     "./src/**/*"
