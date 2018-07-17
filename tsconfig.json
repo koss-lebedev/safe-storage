@@ -1,12 +1,18 @@
 {
   "compilerOptions": {
-    "target": "ES2015",
-    "module": "commonjs",
+    "target": "es5",
+    "moduleResolution": "node",
     "declaration": true,
-    "outDir": "lib",
+    "sourceMap": true,
+    "outDir": "build",
     "strict": true,
     "forceConsistentCasingInFileNames": true,
-    "pretty": true
+    "pretty": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": false,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "noUnusedLocals": true
   },
   "include": [
     "./src/**/*"

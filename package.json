@@ -1,13 +1,14 @@
 {
   "name": "safe-storage",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Provides in-memory storage implementation when localStorage or sessionStorage aren't available",
-  "main": "./lib/index.js",
-  "typings": "./lib/index.d.ts",
+  "main": "dist/cjs/safe-storage.js",
+  "module": "dist/esm/safe-storage.js",
+  "browser": "dist/umd/safe-storage.js",
   "scripts": {
     "prepare": "npm run build",
     "lint": "tslint --fix --project .",
-    "build": "rm -rf ./lib && mkdir -p lib && tsc",
+    "build": "rimraf build dist && tsc && NODE_ENV=production rollup -c",
     "precommit": "lint-staged",
     "lint-staged": "lint-staged",
     "test": "jest"
@@ -24,9 +25,15 @@
     "husky": "^0.14.3",
     "jest": "^22.4.3",
     "lint-staged": "^7.1.0",
+    "rollup": "^0.62.0",
+    "rollup-plugin-commonjs": "^9.1.3",
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "rollup-plugin-typescript2": "^0.15.1",
+    "rollup-plugin-uglify": "^4.0.0",
     "ts-jest": "^22.4.6",
     "tslint": "^5.10.0",
-    "typescript": "^2.8.3"
+    "typescript": "^2.8.3",
+    "uglify-es": "^3.3.9"
   },
   "lint-staged": {
     "*.ts": [
@@ -39,6 +46,9 @@
       "^.+\\.tsx?$": "ts-jest"
     },
     "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.ts$",
-    "moduleFileExtensions": ["ts", "js"]
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ]
   }
 }
